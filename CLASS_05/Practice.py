@@ -20,18 +20,18 @@ def ultrassom_tempo():
   return pulse_time
 
 def ultrassom_cm(tempo_us):
-  return (0.172146 * tempo_us - 0.86406) / 10 
+  return (0.0174063 * tempo_us - 0.3122305)
 
 while True:
   tempo = ultrassom_tempo()
   distancia = ultrassom_cm(tempo)
   print("Tempo (us) = ", tempo)
   print("Distância (cm) = ", distancia)
-  sleep(0.3)
+  sleep(0.5)
 
 while False:
   tempo = ultrassom_tempo()
-  dist_mm = 0.01715*tempo
+  dist_mm = 0.0174*tempo
   dist_calibrada = 1.00*dist_mm + 0.00
   #dist_calibrada = 1.00*tempo + 0.00
   print("Tempo (us) = ", tempo)
